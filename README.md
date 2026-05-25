@@ -17,6 +17,8 @@ Laravel is a regular PHP-based application, so during the deployment process Kin
 ## Environment Variables
 Note that Laravel requires the `APP_KEY` environment variable to be set. If this key is not set you will see an error 500 page served by Laravel. You can generate an app key yourself locally, or you can use this [online Laravel key generator](https://generate-random.org/laravel-key-generator). Once you have a key you can add it as an environment variable in the Settings section of your app. 
 
+This example uses SQLite by default. The included `.env.example` sets `DB_CONNECTION=sqlite`, and the repository includes `database/database.sqlite` so you can run migrations without provisioning MySQL.
+
 ## Web Server Setup
 The default web process will be `heroku-php-apache2`. In this example we've created an `.htaccess` file that reroutes all requests to `public/index.php` for Laravel. If you'd like to change this command you can go to the Processes section in MyKinsta for your application. You could use:
 * `heroku-php-apache2 /public`
